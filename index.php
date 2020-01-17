@@ -20,7 +20,8 @@ $f3 = Base::instance();
 // define a default route
 // -> calls an instance method
 $f3->route('GET /', function() {
-    echo "Pet Home";
+    $view = new Template();
+    echo $view->render('views/home.html');
 });
 
 // run f3
